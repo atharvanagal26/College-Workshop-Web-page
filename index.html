@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Smart Workshop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Tabs -->
+<input type="radio" name="nav" id="tab-dash" checked>
+<input type="radio" name="nav" id="tab-machines">
+<input type="radio" name="nav" id="tab-att">
+
+<!-- Sidebar -->
+<nav>
+    <div class="logo">MIT WORKSHOP</div>
+
+    <label for="tab-dash" class="nav-item">Dashboard</label>
+    <label for="tab-machines" class="nav-item">Machines</label>
+    <label for="tab-att" class="nav-item">Attendance</label>
+
+    <div class="user-info">
+        <p>User: Atharv (Student)</p>
+        <p>PRN: 202501110094</p>
+    </div>
+</nav>
+
+<!-- Main -->
+<main>
+
+<!-- DASHBOARD -->
+<section class="page" id="dash-page">
+    <h1>Welcome back, Amit</h1>
+
+    <div class="stats">
+        <div class="card accent">
+            <h3>Safety Score</h3>
+            <p>1250 XP</p>
+        </div>
+
+        <div class="card success">
+            <h3>Workshop Hours</h3>
+            <p>42.5h</p>
+        </div>
+
+        <div class="card warning">
+            <h3>Pending Tasks</h3>
+            <p>03</p>
+        </div>
+    </div>
+</section>
+
+<!-- MACHINES -->
+<section class="page" id="machines-page">
+    <h1>Workshop Equipment</h1>
+    <p>Real-time status of tools and machinery.</p>
+
+    <!-- Toggle -->
+    <input type="checkbox" id="m1-check">
+    <label for="m1-check" class="btn btn-danger">
+        Simulate Faculty Shutdown (Lathe)
+    </label>
+
+    <div class="grid">
+
+        <!-- Lathe -->
+        <div class="machine machine-1">
+            <div class="m-header">⚙️</div>
+            <div class="m-body">
+                <h4>Heavy Duty Lathe</h4>
+                <span class="status-badge"></span>
+            </div>
+        </div>
+
+        <!-- Printer -->
+        <div class="machine">
+            <div class="m-header">🖨️</div>
+            <div class="m-body">
+                <h4>3D Printer</h4>
+                <span class="status-badge available">Available</span>
+            </div>
+        </div>
+
+        <!-- Laser -->
+        <div class="machine warning-border">
+            <div class="m-header">⚡</div>
+            <div class="m-body">
+                <h4>Laser Cutter</h4>
+                <span class="status-badge in-use">In Use</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ATTENDANCE -->
+<section class="page" id="att-page">
+    <h1>Session Check-in</h1>
+
+    <div class="qr-box">
+        <div class="qr-code"></div>
+        <p class="bold">Scan to Mark Present</p>
+        <p class="muted">Session ID: WS-2024-MAR</p>
+    </div>
+</section>
+
+</main>
+
+</body>
+</html>
